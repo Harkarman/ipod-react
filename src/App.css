@@ -5,19 +5,23 @@
   width: min-content;
 }
 
+/* Screen */
 .screen-container {
   border: 1px solid grey;
   width: 300px;
   height: 200px;
   margin: 0px auto;
   margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Buttons */
 .button-container {
   width: 260px;
   height: 260px;
   border: 1px solid #b9b9b9;
-  margin: 0px auto;
+  margin: 10px auto 0px auto;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -38,12 +42,13 @@
   font-family: "Quicksand", sans-serif;
 }
 
-.center-button {
+.select-button {
   width: 50%;
   height: 50%;
-  background-color: #b9b9b9;
   border-radius: inherit;
-  color: white;
+  outline: inherit;
+  border: inherit;
+  background-color: #b9b9b9;
 }
 
 .menu-button {
@@ -54,14 +59,7 @@
   font-size: 22px;
   font-weight: bolder;
 }
-.select-button {
-  height: inherit;
-  width: inherit;
-  border-radius: inherit;
-  outline: inherit;
-  border: inherit;
-  background-color: inherit;
-}
+
 .back-button {
   left: 0px;
   width: 25%;
@@ -81,12 +79,19 @@
   border-radius: 0px 0% 37% 37%;
 }
 
+/* Menu */
 .main-menu {
-  width: 50%;
+  width: 0;
   height: 100%;
-  position: relative;
+  position: absolute;
   left: 0%;
   background-color: white;
+  overflow-x: hidden;
+  transition: width ease-in-out 0.2s;
+}
+
+.width-50 {
+  width: 50%;
 }
 
 .main-menu > div {
@@ -98,6 +103,7 @@
   height: 20%;
   /* border: 1px solid rgb(190, 190, 190); */
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .main-menu > .selected {

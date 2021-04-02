@@ -3,10 +3,16 @@ import React from "react";
 const Buttons = (props) => {
   return (
     <div className="button-container">
-      <div className="center-button common-buttons">
-        <button className="select-button"></button>
-      </div>
-      <button className="menu-button common-buttons">MENU</button>
+      <button
+        className="select-button common-buttons"
+        onClick={props.selectButtonClick}
+      ></button>
+      <button
+        className="menu-button common-buttons"
+        onClick={props.menuButtonClick}
+      >
+        MENU
+      </button>
       <button className="back-button common-buttons">
         <i className="fas fa-fast-backward"></i>
       </button>

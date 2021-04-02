@@ -2,7 +2,6 @@ import React from "react";
 
 class Menu extends React.Component {
   render() {
-    console.log(this.props.selectedOption);
     const { selectedOption } = this.props;
     return (
       <div className="main-menu">
