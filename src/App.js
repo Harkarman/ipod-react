@@ -7,7 +7,11 @@ import ZingTouch from "zingtouch";
 class App extends React.Component {
   constructor() {
     super();
-    this.angle_change = 0;
+    this.state = {
+      options: ["Coverflow", "Music", "Games", "Settings"],
+      angle_change: 0,
+      selected: 0,
+    };
   }
   componentDidMount() {
     var zt = new ZingTouch.Region(
@@ -18,13 +22,20 @@ class App extends React.Component {
       "rotate",
       (event) => {
         let distance = event.detail.distanceFromLast;
-        this.angle_change += distance;
-        if (this.angle_change > 15) {
-          console.log("clockwise");
-          this.angle_change = 0;
-        } else if (this.angle_change < -15) {
-          console.log("anti-clockwise");
-          this.angle_change = 0;
+        this.state.angle_change += distance;
+        if (this.state.angle_change > 60) {
+          this.state.selected++;
+          this.state.selected = this.state.selected % 4;
+          this.setState({ selected: this.state.selected });
+          this.state.angle_change = 0;
+        } else if (this.state.angle_change < -60) {
+          this.state.selected--;
+          if ((this.state.selected = -1)) {
+            this.state.selected = 3;
+          }
+          this.state.selected = this.state.selected % 4;
+          this.setState({ selected: this.state.selected });
+          this.state.angle_change = 0;
         }
       }
     );
@@ -40,7 +51,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Screen />
+        <Screen selectedOption={this.state.selected} />
         <Buttons check={this.checker} selectButton={this.selectButton} />
       </div>
     );

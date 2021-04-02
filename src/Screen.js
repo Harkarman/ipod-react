@@ -9,7 +9,7 @@ class Screen extends React.Component {
   render() {
     return (
       <div className="screen-container">
-        <Menu />
+        <Menu selectedOption={this.props.selectedOption} />
       </div>
     );
   }
