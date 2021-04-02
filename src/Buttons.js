@@ -6,18 +6,16 @@ const Buttons = (props) => {
       <div className="center-button common-buttons">
         <button className="select-button"></button>
       </div>
-      <button className="menu-button common-buttons">
-        <i class="fas fa-bars"></i>
-      </button>
+      <button className="menu-button common-buttons">MENU</button>
       <button className="back-button common-buttons">
-        <i class="fas fa-fast-backward"></i>
+        <i className="fas fa-fast-backward"></i>
       </button>
       <button className="forward-button common-buttons">
-        <i class="fas fa-fast-backward"></i>
+        <i className="fas fa-fast-backward"></i>
       </button>
       <button className="play-pause-button common-buttons">
-        <i class="fas fa-play fa-xs"></i>&nbsp;
-        <i class="fas fa-pause fa-xs"></i>
+        <i className="fas fa-play fa-xs"></i>&nbsp;
+        <i className="fas fa-pause fa-xs"></i>
       </button>
     </div>
   );

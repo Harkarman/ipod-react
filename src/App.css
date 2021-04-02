@@ -35,6 +35,7 @@
   border: none;
   background-color: transparent;
   color: #b9b9b9;
+  font-family: "Quicksand", sans-serif;
 }
 
 .center-button {
@@ -50,6 +51,8 @@
   height: 25%;
   width: 50%;
   border-radius: 37% 37% 0% 0%;
+  font-size: 22px;
+  font-weight: bolder;
 }
 .select-button {
   height: inherit;
