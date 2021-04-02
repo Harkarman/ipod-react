@@ -1,38 +1,79 @@
 .App {
-  text-align: center;
+  border: 2px solid black;
+  margin: 2px auto 0px auto;
+  padding: 20px 10px 5px 10px;
+  width: min-content;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.screen-container {
+  border: 1px solid grey;
+  width: 300px;
+  height: 200px;
+  margin: 0px auto;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-container {
+  width: 260px;
+  height: 260px;
+  border: 1px solid #b9b9b9;
+  margin: 0px auto;
+  border-radius: 50%;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.common-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #b9b9b9;
+}
+
+.center-button {
+  width: 50%;
+  height: 50%;
+  background-color: #b9b9b9;
+  border-radius: inherit;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-button {
+  top: 0px;
+  height: 25%;
+  width: 50%;
+  border-radius: 37% 37% 0% 0%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select-button {
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  outline: inherit;
+  border: inherit;
+  background-color: inherit;
+}
+.back-button {
+  left: 0px;
+  width: 25%;
+  height: 50%;
+  border-radius: 37% 0% 0% 37%;
+}
+.forward-button {
+  right: 0px;
+  width: 25%;
+  height: 50%;
+  border-radius: 0% 37% 37% 0%;
+}
+.play-pause-button {
+  bottom: 0px;
+  height: 25%;
+  width: 50%;
+  border-radius: 0px 0% 37% 37%;
 }
